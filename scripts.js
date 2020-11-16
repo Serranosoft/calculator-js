@@ -7,6 +7,7 @@ let equal = document.getElementById("equal");
 
 const numbers = [...document.getElementsByClassName("number")];
 const operators = [...document.getElementsByClassName("operator")];
+let reset = document.getElementById("reset");
 
 for (let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener("click", function (index) {
@@ -49,6 +50,13 @@ for (let i = 0; i < operators.length; i++) {
         operatorSelected = index.target.textContent;
     })
 }
+
+reset.addEventListener("click", function() {
+    screen.textContent = "";
+    n1 = "";
+    n2 = "";
+    operatorSelected = undefined;
+})
 
 equal.addEventListener("click", function () {
     n2 = screen.textContent;
