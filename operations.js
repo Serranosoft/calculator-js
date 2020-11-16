@@ -15,7 +15,12 @@ function multiply(n1, n2) {
 
 
 function divide(n1, n2) {
-    return (n1 / n2).toFixed(2);
+    if(n1 / n2 == Infinity) {
+        return "Syntax error";
+    } else {
+        return (n1 / n2).toFixed(2);
+    }
+    
 }
 
 

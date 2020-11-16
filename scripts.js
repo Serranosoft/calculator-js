@@ -19,6 +19,10 @@ let n1;
 let n2;
 function display(number) {
     screen.innerHTML = number;
+    if(number == "Syntax Error") {
+        number = 0;
+    }
+    
 }
 
 for (let i = 0; i < operators.length; i++) {
